@@ -16,37 +16,37 @@ last update 2026/07
 6自由度の運動方程式
 
 $$
-\begin{align}
+\begin{aligned}
 m(\dot{U}+QW-RV) &= -mg \sin{\Theta} + X_a\\
 m(\dot{V}+RU-PW) &= mg \cos{\Theta} \sin{\Phi} + Y_a\\
 m(\dot{W}+PV-QU) &= mg \cos{\Theta}\cos{\Phi} + Z_a
-\end{align}
+\end{aligned}
 $$ {#eq-eq1}
 
 $$
-\begin{align}
+\begin{aligned}
 I_{xx}\dot{P}-I_{xz}\dot{R}+(I_{zz}-I_{yy})QR-I_{xz}PQ &= L\\
 I_{yy}\dot{Q}+(I_{xx}-I_{zz})RP+I_{xz}(P^2-R^2) &= M\\
 -I_{xz}\dot{P}+I_{zz}\dot{R}+(I_{yy}-I_{zz})PQ+I_{xz}QR &= N
-\end{align}
+\end{aligned}
 $$ {#eq-eq2}
 
 機体角速度
 $$
-\begin{align}
+\begin{aligned}
 P &= \dot{\Phi}-\dot{\Psi}\sin{\Theta}\\
 Q &= \dot{\Theta}\cos{\Phi}=\dot{\Psi}\sin{\Phi}\cos{\Theta}\\
 R &= -\dot{\Theta}\sin{\Phi}+\dot{\Psi}\cos{\Phi}\cos{\Theta}
-\end{align}
+\end{aligned}
 $$
 
 オイラー角
 $$
-\begin{align}
+\begin{aligned}
 \dot{\Phi} &= P+Q\sin{\Phi}\tan{\Theta}+R\cos{\Phi}\tan{\Theta}\\
 \dot{\Theta} &= Q\cos{\Phi}-R\sin{\Phi}\\
 \dot{\Psi} &= Q\sin{\Phi}\sec{\Theta}+R\cos{\Phi}\sec{\Theta}
-\end{align}
+\end{aligned}
 $$
 
 ## 導出
@@ -54,51 +54,51 @@ $$
 $X$ 軸方向速度を $U_0$，ピッチ角 $\theta_0 = 0$（水平面内の旋回）として，$Y$ 軸，$Z$ 軸方向速度については定常状態からの変動を考える．バンク角 $\phi_0$，旋回率 $\dot{\psi}_0$ で定常旋回しているとき，釣り合い式
 
 $$
-\begin{align}
+\begin{aligned}
 L\cos{\phi_0} &= mg\\
 L\sin{\phi_0} &= mU_0\dot{\psi}_0\\
 \dot{\psi}_0 &= \frac{r}{U_0}tan{\phi_0}
-\end{align}
+\end{aligned}
 $$
 
 角速度の定常値は
 $$
-\begin{align}
+\begin{aligned}
 P_0 &= 0\\
 Q_0 &= \dot{\psi}_0 \sin{\phi_0}\\
 R_0 &= \dot{\psi}_0 \cos{\phi_0}
-\end{align}
+\end{aligned}
 $$
 
 オイラー角の定常値は
 $$
-\begin{align}
+\begin{aligned}
 \Phi_0 &= \phi_0\\
 \Theta_0 &= \theta_0 = 0\\
 \Psi_0 &= \int \dot{\psi_0} dt
-\end{align}
+\end{aligned}
 $$
 
 より，定常状態の運動方程式は
 $$
-\begin{align}
+\begin{aligned}
 0 &= X_{a0}\\
 mR_0 U_0 &= mg\sin{\phi_0} + Y_{a0}\\
 -mQ_0 U_0  &= mg \cos{\phi_0} + Z_{a0}
-\end{align}
+\end{aligned}
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 (I_{zz}-I_{yy})Q_0R_0&= L_0\\
 -I_{xz}R_0^2 &= M_0\\
 I_{xz}Q_0R_0 &= N_0
-\end{align}
+\end{aligned}
 $$
 
 運動変数の変化分を小文字で表すと
 $$
-\begin{align}
+\begin{aligned}
 U &= U_0 + u\\
 V &= v\\
 W &= w\\
@@ -114,7 +114,7 @@ Z_a &= Z_{a0} + \Delta Z\\
 L &= L_0 + \Delta L\\
 M &= M_0 + \Delta M\\
 N &= N_0 + \Delta N
-\end{align}
+\end{aligned}
 $$
 
 
@@ -122,40 +122,40 @@ $$
 ## 線形化
 オイラー角について，微小角近似すると
 $$
-\begin{align}
+\begin{aligned}
 \sin{\Phi} &= \sin{(\phi_0 + \phi)} \approx \sin{\phi_0}+\phi\cos{\phi_0}\\
 \cos{\Phi} &= \cos{(\phi_0 + \phi)} \approx \cos{\phi_0}-\phi\sin{\phi_0}\\
 \sin{\Theta} &\approx \theta\\
 \cos{\Theta} &\approx 1\\
 \tan{\Theta} &\approx \theta
-\end{align}
+\end{aligned}
 $$
 
 式(@eq-eq1)，(@eq-eq2) に代入し，速度，角速度の変化分が積で現れる項を微小として無視すると，釣合旋回まわりの微小擾乱運動方程式を得る．
 
 $$
-\begin{align}
+\begin{aligned}
 m(\dot{u}+Q_0w-R_0v) &= -mg \theta + \Delta X_a\\
 m(\dot{v}+R_0u-U_0r) &= mg \cos{\phi_0} \phi + \Delta Y_a\\
 m(\dot{w}-Q_0u-U_0q) &= -mg \sin{\phi_0}\phi + \Delta Z_a
-\end{align}
+\end{aligned}
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 I_{xx}\dot{p}-I_{xz}\dot{r}+(I_{zz}-I_{yy})(Q_0r+R_0q)-I_{xz}Q_0p &= \Delta L\\
 I_{yy}\dot{q}+(I_{xx}-I_{zz})R_0p-I_{xz}R_0r &= \Delta M\\
 -I_{xz}\dot{p}+I_{zz}\dot{r}+(I_{yy}-I_{zz})Q_0p+I_{xz}(Q_0r+R_0q) &= \Delta N
-\end{align}
+\end{aligned}
 $$
 
 オイラー角は
 $$
-\begin{align}
+\begin{aligned}
 \dot{\phi} &= p+\dot{\psi_0}\theta\\
 \dot{\theta} &= q\cos{\phi_0}-r\sin{\phi_0}-\dot{\phi_0}\phi\\
 \dot{\psi} &= q\sin{\phi_0}+r\cos{\phi_0}
-\end{align}
+\end{aligned}
 $$
 
 
